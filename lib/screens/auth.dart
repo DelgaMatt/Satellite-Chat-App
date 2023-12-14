@@ -28,7 +28,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   right: 20,
                 ),
                 width: 200,
-                child: Image.asset('assets/images/chat.png'),
+                child: Image.asset('lib/assets/images/chat.png'),
               ),
               Card(
                 margin: const EdgeInsets.all(20),
@@ -44,7 +44,7 @@ class _AuthScreenState extends State<AuthScreen> {
                               labelText: 'Email Address'
                             ),
                             keyboardType: TextInputType.emailAddress,
-                            autocorrect: false,
+                            autocorrect: false, 
                             textCapitalization: TextCapitalization.none,
                           ),
                           TextFormField(

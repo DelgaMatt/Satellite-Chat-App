@@ -1,5 +1,6 @@
+import 'package:satellite/screens/auth.dart';
 import 'package:flutter/material.dart';
-import 'package:app/screens/auth.dart';
+
 
 void main() {
   runApp(const MyApp());
