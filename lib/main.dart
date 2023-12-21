@@ -18,11 +18,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'FlutterChat',
+      title: 'Satellite',
       theme: ThemeData().copyWith(
         useMaterial3: true,
         colorScheme:
-            ColorScheme.fromSeed(seedColor: Color.fromARGB(190, 38, 8, 114)),
+            ColorScheme.fromSeed(seedColor: const Color.fromARGB(190, 38, 8, 114)),
       ),
       home: const AuthScreen(),
     );
