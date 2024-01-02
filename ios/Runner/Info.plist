@@ -26,6 +26,14 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Pick your profile image</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Take your profile image</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Take your profile image</string>
+
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
