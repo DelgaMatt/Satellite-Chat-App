@@ -55,7 +55,7 @@ class _AuthScreenState extends State<AuthScreen> {
             .child('${userCredentials.user!.uid}.jpg');
         //referemce of firebase cloud storage - storing image to the firebase cloud
 
-       await storageRef.putFile(_selectedImage!);
+        await storageRef.putFile(_selectedImage!);
         final imageUrl = await storageRef.getDownloadURL();
 
         await FirebaseFirestore.instance
@@ -86,7 +86,7 @@ class _AuthScreenState extends State<AuthScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Theme.of(context).colorScheme.primary,
       body: Center(
         child: SingleChildScrollView(
           child: Column(
