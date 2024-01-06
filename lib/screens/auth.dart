@@ -103,6 +103,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 child: Image.asset('lib/assets/images/satellite.png'),
               ),
               Card(
+                shadowColor: Theme.of(context).colorScheme.primaryContainer,
                 margin: const EdgeInsets.all(20),
                 child: SingleChildScrollView(
                   child: Padding(

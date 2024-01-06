@@ -11,8 +11,11 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
       
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        backgroundColor: Theme.of(context).colorScheme.secondary,
         title: const Text('Satellite'),
+        titleTextStyle: TextStyle(
+          color: Theme.of(context).colorScheme.onPrimary,
+          ),
         actions: [
           IconButton(
               onPressed: () {
@@ -20,7 +23,7 @@ class ChatScreen extends StatelessWidget {
               },
               icon: Icon(
                 Icons.exit_to_app,
-                color: Theme.of(context).colorScheme.primary,
+                color: Theme.of(context).colorScheme.onPrimary,
               ))
         ],
       ),
