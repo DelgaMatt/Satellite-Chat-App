@@ -22,10 +22,13 @@
 
   ## Usage
 
-WIP..
+  <img src = "https://github.com/DelgaMatt/Satellite-Chat-App/assets/115049801/3dc33525-8247-4635-90a4-e958ec66b42a" width="300" height="650">
+>
 
   ## Resources
   [Material Theme Builder](https://m3.material.io/theme-builder#/custom)
+  <br>
+
   [Flutter Material3 Demo](https://flutter.github.io/samples/web/material_3_demo/)
 
 
