@@ -15,6 +15,7 @@
 
   ## Table of Contents
   - [Usage](#usage)
+  - [Resources](#resources)
   - [Contribute](#contributing)
   - [License](#license)
   - [Questions?](#questions)
@@ -22,6 +23,11 @@
   ## Usage
 
 WIP..
+
+  ## Resources
+  [Material Theme Builder](https://m3.material.io/theme-builder#/custom)
+  [Flutter Material3 Demo](https://flutter.github.io/samples/web/material_3_demo/)
+
 
   ## License
   This app is covered under the [MIT License](https://opensource.org/licenses/MIT)<br>

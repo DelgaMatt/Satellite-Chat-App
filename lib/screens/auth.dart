@@ -91,8 +91,8 @@ class _AuthScreenState extends State<AuthScreen> {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Theme.of(context).colorScheme.primary.withOpacity(1),
-              Theme.of(context).colorScheme.primary.withOpacity(0.6),
+              Theme.of(context).colorScheme.primary.withOpacity(0.8),
+              Theme.of(context).colorScheme.primary.withOpacity(0.2),
               ], begin: Alignment.topLeft, end: Alignment.bottomRight
           )
         ),
@@ -104,11 +104,11 @@ class _AuthScreenState extends State<AuthScreen> {
                 Container(
                   margin: const EdgeInsets.only(
                     top: 30,
-                    bottom: 20,
+                    bottom: 0,
                     left: 20,
                     right: 20,
                   ),
-                  width: 200,
+                  width: 400,
                   child: Image.asset('lib/assets/images/satellite.png'),
                 ),
                 Card(
