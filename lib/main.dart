@@ -10,16 +10,16 @@ import 'firebase_options.dart';
 ThemeData lightTheme = ThemeData().copyWith(
   useMaterial3: true,
   colorScheme:
-      ColorScheme.fromSeed(seedColor:const Color.fromARGB(255, 216, 169, 249)),
+      ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 147, 39, 214)),
   // brightness: Brightness.light,
 );
 
-ThemeData darkTheme = ThemeData().copyWith(
-  useMaterial3: true,
-  colorScheme: 
-    ColorScheme.fromSeed(seedColor:const Color.fromARGB(255, 59, 29, 96)),
-  brightness: Brightness.dark,
-);
+// ThemeData darkTheme = ThemeData().copyWith(
+//   useMaterial3: true,
+//   colorScheme:
+//     ColorScheme.fromSeed(seedColor:const Color.fromARGB(255, 59, 29, 96)),
+//   brightness: Brightness.dark,
+// );
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
       title: 'Satellite',
       theme: lightTheme,
       // darkTheme: darkTheme,
-      // themeMode: ThemeMode.light,
+      // themeMode: ThemeMode.system,
       home: StreamBuilder(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (ctx, snapshot) {
