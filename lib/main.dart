@@ -11,15 +11,15 @@ ThemeData lightTheme = ThemeData().copyWith(
   useMaterial3: true,
   colorScheme:
       ColorScheme.fromSeed(seedColor:const Color.fromARGB(200, 0, 102, 140)),
-  // brightness: Brightness.light,
+  brightness: Brightness.light,
 );
 
-// ThemeData darkTheme = ThemeData().copyWith(
-//   useMaterial3: true,
-//   colorScheme:
-//     ColorScheme.fromSeed(seedColor:const Color.fromARGB(255, 59, 29, 96)),
-//   brightness: Brightness.dark,
-// );
+ThemeData darkTheme = ThemeData().copyWith(
+  useMaterial3: true,
+  colorScheme:
+    ColorScheme.fromSeed(seedColor:const Color.fromARGB(255, 59, 29, 96)),
+  brightness: Brightness.dark,
+);
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,8 +37,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Satellite',
       theme: lightTheme,
-      // darkTheme: darkTheme,
-      // themeMode: ThemeMode.system,
+      darkTheme: darkTheme,
+      themeMode: ThemeMode.system,
       home: StreamBuilder(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (ctx, snapshot) {
