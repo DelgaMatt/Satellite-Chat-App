@@ -9,9 +9,8 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        backgroundColor: Theme.of(context).colorScheme.secondary,
         title: const Text('Satellite'),
         titleTextStyle: TextStyle(
           color: Theme.of(context).colorScheme.onPrimary,

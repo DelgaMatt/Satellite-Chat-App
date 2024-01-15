@@ -112,7 +112,8 @@ class _AuthScreenState extends State<AuthScreen> {
                   child: Image.asset('lib/assets/images/satellite.png'),
                 ),
                 Card(
-                  shadowColor: Theme.of(context).colorScheme.primaryContainer,
+                  shadowColor: const Color.fromARGB(255, 118, 111, 91),
+                  elevation: 2.0,
                   margin: const EdgeInsets.all(20),
                   child: SingleChildScrollView(
                     child: Padding(
@@ -130,7 +131,8 @@ class _AuthScreenState extends State<AuthScreen> {
                               ),
                             TextFormField(
                               decoration: const InputDecoration(
-                                  labelText: 'Email Address'),
+                                  labelText: 'Email Address'
+                                  ),
                               keyboardType: TextInputType.emailAddress,
                               autocorrect: false,
                               textCapitalization: TextCapitalization.none,
