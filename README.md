@@ -1,11 +1,11 @@
 
-<img src="https://github.com/DelgaMatt/Shopping-List/assets/115049801/985a6d51-b4d2-4132-b2d9-150312fbfdf5" width="100" height="100">
+<img src="https://github.com/DelgaMatt/Satellite-Chat-App/assets/115049801/1b1f09b9-57ad-4f82-bf62-3ff88d37ce71" width="100" height="100">
 
 # Satellite
   ![License Badge](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)
   ![License Badge](https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white)
   [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)](https://firebase.google.com/)
-  [![FireStore](https://img.shields.io/badge/FireStore-D8A9F9?style=flat&logo=firestore&logoColor=black)](https://firebase.google.com/)
+  [![Cloud FireStore](https://img.shields.io/badge/FireStore-D8A9F9?style=flat&logo=firestore&logoColor=black)](https://firebase.google.com/)
   [![Material-UI](https://img.shields.io/badge/Material--UI-0081CB?style=flat&logo=material-ui&logoColor=white)](https://material-ui.com/)
   <br>
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
