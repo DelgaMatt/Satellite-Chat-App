@@ -60,7 +60,7 @@ class _NewMessageState extends ConsumerState<NewMessage> {
           const SizedBox(width: 5,),
           Expanded(
             child: TextField(
-              style: darkMode ? const TextStyle(color: Colors.white) : TextStyle(color: Theme.of(context).colorScheme.onPrimary),
+              style: darkMode ? const TextStyle(color: Colors.white) : const TextStyle(color: Colors.black),
               controller: _messageController,
               textCapitalization: TextCapitalization.sentences,
               autocorrect: true,

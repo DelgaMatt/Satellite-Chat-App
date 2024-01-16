@@ -23,15 +23,13 @@
 
   ## Usage
 
-  <img src="https://github.com/DelgaMatt/Satellite-Chat-App/assets/115049801/3dc33525-8247-4635-90a4-e958ec66b42a" width="300" height="650">
-
+  To use the application, one simply needs to sign up using a valid image, email and password. <br>
+  <video src="https://github.com/DelgaMatt/Satellite-Chat-App/assets/115049801/33ec68ea-be86-41fb-9710-915fb6fe9c24" width="300" height="650">
 
   ## Resources
   [Material Theme Builder](https://m3.material.io/theme-builder#/custom)
   <br>
-
   [Flutter Material3 Demo](https://flutter.github.io/samples/web/material_3_demo/)
-
 
   ## License
   This app is covered under the [MIT License](https://opensource.org/licenses/MIT)<br>
