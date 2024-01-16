@@ -1,17 +1,19 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:satellite/provider/dark_mode_provider.dart';
 
-class NewMessage extends StatefulWidget {
+class NewMessage extends ConsumerStatefulWidget {
   const NewMessage({super.key});
 
   @override
-  State<NewMessage> createState() {
+  ConsumerState<NewMessage> createState() {
     return _NewMessageState();
   }
 }
 
-class _NewMessageState extends State<NewMessage> {
+class _NewMessageState extends ConsumerState<NewMessage> {
   final _messageController = TextEditingController();
 
   @override
@@ -50,12 +52,15 @@ class _NewMessageState extends State<NewMessage> {
 
   @override
   Widget build(BuildContext context) {
+    var darkMode = ref.watch(darkModeProvider);
+
     return Padding(
         padding: const EdgeInsets.only(left: 15, right: 1, bottom: 14),
         child: Row(children: [
           const SizedBox(width: 5,),
           Expanded(
             child: TextField(
+              style: darkMode ? const TextStyle(color: Colors.white) : TextStyle(color: Theme.of(context).colorScheme.onPrimary),
               controller: _messageController,
               textCapitalization: TextCapitalization.sentences,
               autocorrect: true,

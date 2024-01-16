@@ -86,7 +86,6 @@ class _AuthScreenState extends State<AuthScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: ,
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
