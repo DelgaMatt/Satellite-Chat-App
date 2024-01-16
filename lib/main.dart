@@ -14,14 +14,23 @@ import 'firebase_options.dart';
 ThemeData lightTheme = ThemeData().copyWith(
   useMaterial3: true,
   colorScheme:
-      ColorScheme.fromSeed(seedColor:const Color.fromARGB(200, 0, 102, 140)),
+      ColorScheme.fromSeed(seedColor: const Color.fromARGB(200, 0, 102, 140)),
+  appBarTheme: const AppBarTheme(
+    backgroundColor: Color.fromARGB(200, 0, 102, 140),
+  ),
   brightness: Brightness.light,
 );
 
 ThemeData darkTheme = ThemeData().copyWith(
   useMaterial3: true,
   colorScheme:
-    ColorScheme.fromSeed(seedColor:const Color.fromARGB(255, 59, 29, 96)),
+      ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 59, 29, 96)),
+  appBarTheme: const AppBarTheme(
+      backgroundColor: Color.fromRGBO(70, 69, 69, 0.265),
+      elevation: 4,
+      shadowColor: Color.fromARGB(255, 240, 50, 3)),
+  scaffoldBackgroundColor: Colors.black,
+  // textTheme: const TextTheme(bodySmall: TextStyle(color: Colors.white)),
   brightness: Brightness.dark,
 );
 

@@ -51,7 +51,6 @@ class _NewMessageState extends State<NewMessage> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-         
         padding: const EdgeInsets.only(left: 15, right: 1, bottom: 14),
         child: Row(children: [
           const SizedBox(width: 5,),
@@ -65,14 +64,12 @@ class _NewMessageState extends State<NewMessage> {
                 labelText: 'Send a message...',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50),
+                  ),
                 ),
-                
-                ),
-
             ),
           ),
           IconButton(
-            color: Theme.of(context).colorScheme.primary,
+            color: Theme.of(context).colorScheme.secondary,
             onPressed: _submitMessage,
             icon: const Icon(Icons.send),
           ),

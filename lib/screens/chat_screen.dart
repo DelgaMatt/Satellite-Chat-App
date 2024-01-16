@@ -14,7 +14,6 @@ class ChatScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.secondary,
         title: const Text('Satellite'),
         titleTextStyle: TextStyle(
           color: Theme.of(context).colorScheme.onPrimary,
@@ -22,6 +21,7 @@ class ChatScreen extends ConsumerWidget {
           ),
         actions: [
           Switch(
+            activeTrackColor: Colors.grey,
             value: darkMode,
             onChanged: (val) {
               ref.read(darkModeProvider.notifier).toggle();

@@ -92,7 +92,7 @@ class _AuthScreenState extends State<AuthScreen> {
           gradient: LinearGradient(
             colors: [
               Theme.of(context).colorScheme.primary.withOpacity(0.8),
-              Theme.of(context).colorScheme.primary.withOpacity(0.2),
+              Theme.of(context).colorScheme.primary.withOpacity(0.6),
               ], begin: Alignment.topLeft, end: Alignment.bottomRight
           )
         ),
