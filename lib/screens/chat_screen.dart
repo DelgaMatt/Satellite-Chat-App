@@ -1,22 +1,32 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:satellite/provider/darkModeProvider.dart';
 import 'package:satellite/widgets/chat_messages.dart';
 import 'package:satellite/widgets/new_message.dart';
 
-class ChatScreen extends StatelessWidget {
+class ChatScreen extends ConsumerWidget {
   const ChatScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+        var darkMode = ref.watch(darkModeProvider);
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.secondary,
         title: const Text('Satellite'),
         titleTextStyle: TextStyle(
           color: Theme.of(context).colorScheme.onPrimary,
-          fontSize: 20
+          fontSize: 25,
           ),
         actions: [
+          Switch(
+            value: darkMode,
+            onChanged: (val) {
+              ref.read(darkModeProvider.notifier).toggle();
+            },
+          ),
           IconButton(
               onPressed: () {
                 FirebaseAuth.instance.signOut();
