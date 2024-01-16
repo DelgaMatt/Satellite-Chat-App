@@ -5,7 +5,8 @@
   ![License Badge](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)
   ![License Badge](https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white)
   [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)](https://firebase.google.com/)
-  [![Cloud FireStore](https://img.shields.io/badge/FireStore-D8A9F9?style=flat&logo=firestore&logoColor=black)](https://firebase.google.com/)
+  [![Cloud FireStore](https://img.shields.io/badge/FireStore-FFCA28?style=flat&logo=firestore&logoColor=black)](https://firebase.google.com/)
+  ![Flutter_Riverpod](https://img.shields.io/badge/Flutter_Riverpod-0.14.0-blue.svg)
   [![Material-UI](https://img.shields.io/badge/Material--UI-0081CB?style=flat&logo=material-ui&logoColor=white)](https://material-ui.com/)
   <br>
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
