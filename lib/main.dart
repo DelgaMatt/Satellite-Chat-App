@@ -7,7 +7,7 @@ import 'package:satellite/screens/chat_screen.dart';
 import 'package:satellite/screens/splash_screen.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:satellite/provider/darkModeProvider.dart';
+import 'package:satellite/provider/dark_mode_provider.dart';
 
 import 'firebase_options.dart';
 

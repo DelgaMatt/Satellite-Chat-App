@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:satellite/provider/darkModeProvider.dart';
+import 'package:satellite/provider/dark_mode_provider.dart';
 import 'package:satellite/widgets/chat_messages.dart';
 import 'package:satellite/widgets/new_message.dart';
 
