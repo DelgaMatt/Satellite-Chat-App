@@ -23,14 +23,13 @@ ThemeData lightTheme = ThemeData().copyWith(
 
 ThemeData darkTheme = ThemeData().copyWith(
   useMaterial3: true,
-  colorScheme:
-      ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 177, 55, 55)),
+  colorScheme: ColorScheme.fromSeed(seedColor:const Color.fromARGB(255, 255,215,0), primary: Colors.black),
   appBarTheme: const AppBarTheme(
-      backgroundColor: Color.fromRGBO(70, 69, 69, 0.265),
-      elevation: 4,
-      shadowColor: Color.fromARGB(255, 240, 50, 3)),
+    backgroundColor: Color.fromRGBO(70, 69, 69, 0.265),
+    elevation: 4,
+  ),
   scaffoldBackgroundColor: Colors.black,
-    brightness: Brightness.dark,
+  brightness: Brightness.dark,
 );
 
 void main() async {

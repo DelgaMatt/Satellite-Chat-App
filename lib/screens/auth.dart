@@ -3,21 +3,23 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:satellite/provider/dark_mode_provider.dart';
 // import 'package:image_picker/image_picker.dart';
 import 'package:satellite/widgets/user_image_picker.dart';
 
 final _firebase = FirebaseAuth.instance;
 
-class AuthScreen extends StatefulWidget {
+class AuthScreen extends ConsumerStatefulWidget {
   const AuthScreen({super.key});
 
   @override
-  State<AuthScreen> createState() {
+  ConsumerState<AuthScreen> createState() {
     return _AuthScreenState();
   }
 }
 
-class _AuthScreenState extends State<AuthScreen> {
+class _AuthScreenState extends ConsumerState<AuthScreen> {
   final _formKey = GlobalKey<FormState>();
   var _isLogin = true;
   var _enteredEmail = '';
@@ -85,16 +87,15 @@ class _AuthScreenState extends State<AuthScreen> {
 
   @override
   Widget build(BuildContext context) {
+  var darkMode = ref.watch(darkModeProvider);
+
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Theme.of(context).colorScheme.primary.withOpacity(0.8),
-              Theme.of(context).colorScheme.primary.withOpacity(0.6),
-              ], begin: Alignment.topLeft, end: Alignment.bottomRight
-          )
-        ),
+            gradient: LinearGradient(colors: [
+          Theme.of(context).colorScheme.primary.withOpacity(0.8),
+          Theme.of(context).colorScheme.primary.withOpacity(0.6),
+        ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
         child: Center(
           child: SingleChildScrollView(
             child: Column(
@@ -108,12 +109,17 @@ class _AuthScreenState extends State<AuthScreen> {
                     right: 20,
                   ),
                   width: 400,
-                  child: Image.asset('lib/assets/images/satellite.png'),
+                  child: darkMode ? Image.asset('lib/assets/images/satellite_dark.png') : Image.asset('lib/assets/images/satellite_light.png'),
                 ),
                 Card(
-                  shadowColor: const Color.fromARGB(255, 118, 111, 91),
+                  color: darkMode ? const Color.fromARGB(255, 23, 23, 23) : Theme.of(context).colorScheme.background,
+                  // shadowColor: Color.fromARGB(255, 221, 162, 13),
                   elevation: 2.0,
                   margin: const EdgeInsets.all(20),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: const BorderRadius.all(Radius.circular(40)),
+                    side: BorderSide(color: Theme.of(context).colorScheme.secondary)
+                  ),
                   child: SingleChildScrollView(
                     child: Padding(
                       padding: const EdgeInsets.all(16),
@@ -129,8 +135,10 @@ class _AuthScreenState extends State<AuthScreen> {
                                 },
                               ),
                             TextFormField(
-                              decoration: const InputDecoration(
-                                  labelText: 'Email Address'
+                              style: darkMode? TextStyle(color: Theme.of(context).colorScheme.onPrimary) : TextStyle(color: Theme.of(context).colorScheme.primary),
+                              decoration: InputDecoration(
+                                  labelText: 'Email Address',
+                                  floatingLabelStyle: darkMode? TextStyle(color: Theme.of(context).colorScheme.secondary) : TextStyle(color: Theme.of(context).colorScheme.primary),
                                   ),
                               keyboardType: TextInputType.emailAddress,
                               autocorrect: false,
@@ -149,8 +157,11 @@ class _AuthScreenState extends State<AuthScreen> {
                             ),
                             if (!_isLogin)
                               TextFormField(
-                                decoration:
-                                    const InputDecoration(labelText: 'Username'),
+                                    style: darkMode? TextStyle(color: Theme.of(context).colorScheme.onPrimary) : TextStyle(color: Theme.of(context).colorScheme.primary),                                
+                                    decoration: InputDecoration(
+                                      labelText: 'Username',
+                                      floatingLabelStyle: darkMode ? TextStyle(color: Theme.of(context).colorScheme.secondary) : TextStyle(color: Theme.of(context).colorScheme.primary),
+                                    ),
                                 enableSuggestions: false,
                                 validator: (value) {
                                   if (value == null ||
@@ -165,8 +176,11 @@ class _AuthScreenState extends State<AuthScreen> {
                                 },
                               ),
                             TextFormField(
-                              decoration:
-                                  const InputDecoration(labelText: 'Password'),
+                                  style: darkMode? TextStyle(color: Theme.of(context).colorScheme.onPrimary) : TextStyle(color: Theme.of(context).colorScheme.primary),                              
+                                  decoration: InputDecoration(
+                                    labelText: 'Password',
+                                    floatingLabelStyle: darkMode? TextStyle(color: Theme.of(context).colorScheme.secondary) : TextStyle(color: Theme.of(context).colorScheme.primary),
+                                  ),
                               obscureText: true,
                               validator: (value) {
                                 if (value == null || value.trim().length < 6) {
@@ -185,9 +199,10 @@ class _AuthScreenState extends State<AuthScreen> {
                               ElevatedButton(
                                 onPressed: _submit,
                                 style: ElevatedButton.styleFrom(
-                                    backgroundColor: Theme.of(context)
-                                        .colorScheme
-                                        .primaryContainer),
+                                  backgroundColor: Theme.of(context)
+                                      .colorScheme
+                                      .primaryContainer,
+                                ),
                                 child: Text(_isLogin ? 'Login' : 'Signup'),
                               ),
                             TextButton(
