@@ -67,6 +67,13 @@ class _NewMessageState extends ConsumerState<NewMessage> {
               enableSuggestions: true,
               decoration: InputDecoration(
                 labelText: 'Send a message...',
+                floatingLabelStyle: darkMode? TextStyle(color: Theme.of(context).colorScheme.secondary) : TextStyle(color: Theme.of(context).colorScheme.primary),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Theme.of(context).colorScheme.secondary
+                  ),
+                  borderRadius: BorderRadius.circular(50)
+                ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50),
                   ),
