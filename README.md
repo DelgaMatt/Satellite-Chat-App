@@ -24,7 +24,7 @@
   ## Usage
 
   To use the application, one simply needs to sign up using a valid image, email and password. <br>
-  <video src="https://github.com/DelgaMatt/Satellite-Chat-App/assets/115049801/33ec68ea-be86-41fb-9710-915fb6fe9c24" width="300" height="650">
+  <video src="https://github.com/DelgaMatt/Satellite-Chat-App/assets/115049801/1d5c3129-91cd-4a50-8cff-381876f113b7" width="300" height="650">
 
   ## Resources
   [Material Theme Builder](https://m3.material.io/theme-builder#/custom)
